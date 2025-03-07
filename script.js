@@ -31,3 +31,21 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+//how dom works behind the scene
+// every single node is node
+// there are differnt types node 
+// elemnt type,tect,type comment type and node type
+//inhiretance
+// child node can acsess parent node 
+//document that we use in dom manuplation is another type of dom node
+// special node type called event target thank to inheritance bwcause ue can call add event listenrt on every node type in the dom api
+//SELECTING
+// the entire html
+console.log(document.documentElement)
+console.log(document.head)
+console.log(document.body )
+
+
+document.querySelector('.header')
+const allSection=document.querySelectorAll('.section')
+console.log(allSection)
