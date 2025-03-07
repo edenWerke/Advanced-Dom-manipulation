@@ -49,3 +49,8 @@ console.log(document.body )
 document.querySelector('.header')
 const allSection=document.querySelectorAll('.section')
 console.log(allSection)
+
+
+
+document.getElementById('section--1');
+// const allButtons=document.getElementsByTagName('')
