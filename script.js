@@ -103,3 +103,5 @@ console.log(message.style.height)
 console.log(getComputedStyle(message).color)
 console.log(getComputedStyle(message).height)
 message.style.height=Number.parseFloat(getComputedStyle(message).height,10)+20+'px'
+
+document.documentElement.style.setProperty( '--color-primary', 'blue')
