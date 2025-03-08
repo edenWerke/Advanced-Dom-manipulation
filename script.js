@@ -41,17 +41,35 @@ document.addEventListener('keydown', function (e) {
 // special node type called event target thank to inheritance bwcause ue can call add event listenrt on every node type in the dom api
 //SELECTING
 // the entire html
-console.log(document.documentElement)
-console.log(document.head)
-console.log(document.body )
+// console.log(document.documentElement)
+// console.log(document.head)
+// console.log(document.body )
+
+// //this does not update it self when we manuplate the html
+// //modern one we should this
+// document.querySelector('.header')
+// const allSection=document.querySelectorAll('.section')
+// console.log(allSection)
+
+// document.getElementById('section--1');
+// //returns an html coolection called life collection means if the dom changes the html automatically changes
+
+// const allButtons=document.getElementsByTagName('button')
+// console.log(allButtons)
 
 
-document.querySelector('.header')
-const allSection=document.querySelectorAll('.section')
-console.log(allSection)
+// console.log(document.getElementsByClassName('btn'))
 
-
-
-document.getElementById('section--1');
-const allButtons=document.getElementsByTagName('button')
-console.log(allButtons)
+// creating and inserting an element
+// cool and we use most of the time
+// .insertAdjacentHTML
+// creates the dom element
+const message=document.createElement('div');
+message.classList.add('cookie-message')
+//inserting a text
+message.textContent="we use cookie for improved functionality and analytics"
+console.log(message)
+// inserting an html
+message.innerHTML='we use cookie for improved functionality and analytics<button class="btn btn--close-cookie">GOT IT !</button>'
+//inserting to our dom
+document.querySelector('.header').prepend(message)
