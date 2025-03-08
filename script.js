@@ -109,6 +109,7 @@ document.documentElement.style.setProperty( '--color-primary', 'orangered')
 //ATTRIBUTES
 // reads only standard property like src,alt,className
 const logo=document.querySelector('.nav__logo');
+// absolute url
 console.log(logo.src)
 console.log(logo.alt)
 console.log(logo.className)
@@ -118,3 +119,13 @@ logo.alt='Beatifull minimalist logo'
 // for those that are not standards
 console.log(logo.getAttribute('designer'))
 logo.setAttribute('company','Bankist')
+// relative url
+console.log(logo.getAttribute('src'))
+const links=document.querySelector('.twitter-link')
+console.log(links.href);
+console.log(links.getAttribute('href'))
+
+
+//Data attributes
+
+console.log(logo.dataset.versionNumber)
