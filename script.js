@@ -77,9 +77,10 @@ message.innerHTML='we use cookie for improved functionality and analytics<button
 // document.querySelector('.header').prepend(message)
 // inserting as a last child
 // dom element is unique we can only have once
-document.querySelector('.header').append(message)
+// document.querySelector('.header').append(message)
 
 //before
 
 // inserting the element before the header as a sibling
-document.querySelector('.header').before(message)
+// document.querySelector('.header').before(message)
+document.querySelector('.header').after(message)
