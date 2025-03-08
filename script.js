@@ -88,8 +88,18 @@ document.querySelector('.header').after(message)
 
 //delete an element
 // no need to select the message element because it is already saved
-document.querySelector('.btn--close--cookie').addEventListener('click',function(){
-  message.remove();
-// we used to dp this in past times
-message.parentElement.removeChild(message)
-});
+// document.querySelector('.btn--close-cookie').addEventListener('click',function(){
+//   message.remove();
+// // 
+// });
+
+
+// STYLES
+// styles directly applied to the inline style
+message.style.backgroundColor='#37383d'
+message.style.width="120%"
+console.log(message.style.height)
+// all properties with its value
+console.log(getComputedStyle(message).color)
+console.log(getComputedStyle(message).height)
+message.style.height=Number.parseFloat(getComputedStyle(message).height,10)+20+'px'
