@@ -72,4 +72,8 @@ console.log(message)
 // inserting an html
 message.innerHTML='we use cookie for improved functionality and analytics<button class="btn btn--close-cookie">GOT IT !</button>'
 //inserting to our dom
+
+//inserting as a first child
 document.querySelector('.header').prepend(message)
+// inserting a last child
+document.querySelector('.header').append(message)
