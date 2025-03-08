@@ -107,8 +107,13 @@ message.style.height=Number.parseFloat(getComputedStyle(message).height,10)+20+'
 document.documentElement.style.setProperty( '--color-primary', 'orangered')
 
 //ATTRIBUTES
-// reads only standard property like src,alt
+// reads only standard property like src,alt,className
 const logo=document.querySelector('.nav__logo');
 console.log(logo.src)
 console.log(logo.alt)
-console.logo(logo.className)
+console.log(logo.className)
+
+
+logo.alt='Beatifull minimalist logo'
+// for those that are not standards
+console.log(logo.getAttribute('designer'))
