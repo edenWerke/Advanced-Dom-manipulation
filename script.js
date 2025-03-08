@@ -84,3 +84,12 @@ message.innerHTML='we use cookie for improved functionality and analytics<button
 // inserting the element before the header as a sibling
 // document.querySelector('.header').before(message)
 document.querySelector('.header').after(message)
+
+
+//delete an element
+// no need to select the message element because it is already saved
+document.querySelector('.btn--close--cookie').addEventListener('click',function(){
+  message.remove();
+// we used to dp this in past times
+message.parentElement.removeChild(message)
+});
