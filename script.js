@@ -129,3 +129,9 @@ console.log(links.getAttribute('href'))
 //Data attributes
 
 console.log(logo.dataset.versionNumber)
+//CLass
+logo.classList.add('c','background-pink');
+logo.classList.remove('')
+logo.classList.toggle('')
+logo.classList.contains('')
+logo.className="jonas"
