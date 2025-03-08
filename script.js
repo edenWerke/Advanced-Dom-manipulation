@@ -117,3 +117,4 @@ console.log(logo.className)
 logo.alt='Beatifull minimalist logo'
 // for those that are not standards
 console.log(logo.getAttribute('designer'))
+logo.setAttribute('company','Bankist')
