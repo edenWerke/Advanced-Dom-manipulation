@@ -166,6 +166,10 @@ btnScrollTO.addEventListener('click',function(e){
 //   top:s1coords.top+window.pageYOffset,
 //   behavior:'smooth'
 // })
-section1.scrollIntoView({behavior:'smooth'})
-})
-
+section1.scrollIntoView({behavior:'smooth'})})
+//EVENTS
+// SIGNAL THAT SOMETHING HAPPENED ON THE PAGE
+const h1 = document.querySelector('h1');
+h1.addEventListener('mouseenter', function(e) {
+  alert('addEventListener: Great! You are reading the heading :D');
+});
