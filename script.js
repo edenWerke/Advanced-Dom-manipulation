@@ -130,8 +130,26 @@ console.log(links.getAttribute('href'))
 
 console.log(logo.dataset.versionNumber)
 //CLass
-logo.classList.add('c','background-pink');
-logo.classList.remove('')
-logo.classList.toggle('')
-logo.classList.contains('')
-logo.className="jonas"
+// logo.classList.add('c','background-pink');
+// logo.classList.remove('')
+// logo.classList.toggle('')
+// logo.classList.contains('')
+// logo.className="jonas"
+
+// smoth scroling
+// const btnScrollTo=document.querySelector('.btn--scroll-to');
+// const section1=document.querySelector("section--1");
+
+// btnScrollTo.addEventListener('click',function(e){
+//   const s1coords=sect
+// })
+// smotthe scrolling
+const btnScrollTO=document.querySelector('.btn--scroll-to')
+const section1=document.querySelector('#section--1');
+
+
+btnScrollTO.addEventListener('click',function(e){
+ const s1coords=section1.getBoundingClientRect();
+ console.log(s1coords) 
+ console.log(e.target.getBoundingClientRect())
+})
