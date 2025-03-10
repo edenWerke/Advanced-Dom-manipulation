@@ -170,9 +170,15 @@ section1.scrollIntoView({behavior:'smooth'})})
 //EVENTS
 // SIGNAL THAT SOMETHING HAPPENED ON THE PAGE
 const h1 = document.querySelector('h1');
-h1.addEventListener('mouseenter', function(e) {
+const alertH1=function(e){
   alert('addEventListener: Great! You are reading the heading :D');
-});
-h1.onmouseenter=function(e) {
-  alert('addEventListener: Great! You are reading the heading :D');
-};
+  h1.removeEventListener('mouseenter',alertH1)
+}
+
+h1.addEventListener('mouseenter',alertH1);
+h1.removeEventListener('mouseenter',alertH1)
+// setTimeout(()=>h1.removeEventListener('mouseenter',alertH1),3000)
+// h1.onmouseenter=function(e) {
+//   alert('addEventListener: Great! You are reading the heading :D');
+// };
+//remove event listener
