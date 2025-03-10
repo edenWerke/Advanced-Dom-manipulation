@@ -151,5 +151,8 @@ const section1=document.querySelector('#section--1');
 btnScrollTO.addEventListener('click',function(e){
  const s1coords=section1.getBoundingClientRect();
  console.log(s1coords) 
+ //getting the box size of th button
  console.log(e.target.getBoundingClientRect())
+//  getting the offset
+ console.log('Current scroll (X/Y)',window.pageXOffset,pageYOffset)
 })
