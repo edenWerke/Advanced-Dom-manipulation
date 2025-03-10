@@ -153,6 +153,11 @@ btnScrollTO.addEventListener('click',function(e){
  console.log(s1coords) 
  //getting the box size of th button
  console.log(e.target.getBoundingClientRect())
-//  getting the offset
+//  getting the offset or current position
  console.log('Current scroll (X/Y)',window.pageXOffset,pageYOffset)
+
+// height and width of the view port
+ console.log('height/width viewport',document.documentElement.clientHeight,document.documentElement.clientWidth)
+
 })
+
