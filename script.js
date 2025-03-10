@@ -160,6 +160,11 @@ btnScrollTO.addEventListener('click',function(e){
  console.log('height/width viewport',document.documentElement.clientHeight,document.documentElement.clientWidth)
 
  //SCROLLING
- window.scrollTo(s1coords.left,s1coords.top)
+//  window.scrollTo(s1coords.left+window.pageXOffset,s1coords.top+window.pageYOffset)
+window.scrollTo({
+  left:s1coords.left+window.pageXOffset,
+  top:s1coords.top+window.pageYOffset,
+  behavior:'smooth'
+})
 })
 
