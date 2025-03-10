@@ -159,5 +159,7 @@ btnScrollTO.addEventListener('click',function(e){
 // height and width of the view port
  console.log('height/width viewport',document.documentElement.clientHeight,document.documentElement.clientWidth)
 
+ //SCROLLING
+ window.scrollTo(s1coords.left,s1coords.top)
 })
 
