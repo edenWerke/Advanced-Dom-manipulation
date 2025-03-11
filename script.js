@@ -68,7 +68,19 @@ document.querySelectorAll('.nav__link').forEach(function(el){
     document.querySelector(id).scrollIntoView({behavior:'smooth'})
   })
 })
+//event delegation
 
+//1. Add event listener to common parent element
+document.querySelector('.nav__links').addEventListener('click',function(e){
+e.preventDefault();
+
+  //mayching stratagy
+  if(e.target.classList.contains('nav__link')){
+    const id=e.target.getAttribute('href')
+    console.log(id)
+    document.querySelector(id).scrollIntoView({behavior:'smooth'})
+  }
+})
 
 
 //how dom works behind the scene
