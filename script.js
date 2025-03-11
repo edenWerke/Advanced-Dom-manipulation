@@ -203,4 +203,5 @@ document.querySelector('.nav__links').addEventListener('click',function(e){
 document.querySelector('.nav').addEventListener('click',function(e){
   this.style.backgroundColor=randomColor();
   console.log(e.target,e.currentTarget)
-})
+},true)
+//listeninig to the captur event not the bubbling event
