@@ -192,6 +192,9 @@ console.log(randomColor(0,255))
 document.querySelector('.nav__link').addEventListener('click',function(e){
   this.style.backgroundColor=randomColor();
   console.log(e.target,e.currentTarget)
+  //stop propagation
+e.stopPropagation()
+
 })
 document.querySelector('.nav__links').addEventListener('click',function(e){
   this.style.backgroundColor=randomColor();
