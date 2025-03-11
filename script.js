@@ -60,6 +60,7 @@ section1.scrollIntoView({behavior:'smooth'})})
 //////////////////////////////////
 document.querySelectorAll('.nav__link').forEach(function(el){
   el.addEventListener('click',function(e){
+    e.preventDefault();
     console.log("my link ")
   })
 })
