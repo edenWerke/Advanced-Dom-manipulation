@@ -182,3 +182,8 @@ setTimeout(()=>h1.removeEventListener('mouseenter',alertH1),3000)
 //   alert('addEventListener: Great! You are reading the heading :D');
 // };
 //remove event listener
+// rgb(225,225,225)
+const randomInt=(min,max)=>Math.floor(Math.random()*max-min)+1;
+
+const randomColor=()=>`rgb(${randomInt(0,255)},${randomInt(0,255)},${randomInt(0,255)})`
+console.log(randomColor(0,255))
