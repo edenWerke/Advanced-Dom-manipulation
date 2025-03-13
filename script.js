@@ -237,3 +237,4 @@ const h1 = document.querySelector('h1');
 // selecting child elemenet using parent element
 
 console.log(h1.querySelectorAll('.highlight'));
+console.log(h1.childNodes);
