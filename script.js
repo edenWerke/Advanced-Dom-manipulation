@@ -249,3 +249,14 @@ console.log(h1.parentNode);
 console.log(h1.parentElement);
 //finding the closest parent elemnt of h1 and appling style to it
 h1.closest('.header').style.background = 'var(--gradient-secondary)';
+//going sideways selecting siblings
+console.log(h1.previousElementSibling);
+console.log(h1.nextElementSibling);
+
+console.log(h1.previousSibling);
+console.log(h1.nextSibling);
+//all siblings from the parent element
+console.log(h1.parentElement.children);
+[...h1.parentElement.children].forEach(function (el) {
+  if (el !== h1) el.style.transform = 'scale(0.5)';
+});
