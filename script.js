@@ -260,3 +260,14 @@ console.log(h1.parentElement.children);
 [...h1.parentElement.children].forEach(function (el) {
   if (el !== h1) el.style.transform = 'scale(0.5)';
 });
+// creating tabs
+// const tabs=document.querySelectorAll('.operations__tab')
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelector('operations_tab-container');
+const tabsContent = document.querySelectorAll('.operations_content');
+
+tabs.forEach(t =>
+  t.addEventListener('click', () => {
+    console.log('tab');
+  })
+);
