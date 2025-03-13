@@ -263,7 +263,7 @@ console.log(h1.parentElement.children);
 // creating tabs
 // const tabs=document.querySelectorAll('.operations__tab')
 const tabs = document.querySelectorAll('.operations__tab');
-const tabsContainer = document.querySelector('operations_tab-container');
+const tabsContainer = document.querySelector('.operations__tab-container');
 const tabsContent = document.querySelectorAll('.operations_content');
 
 tabs.forEach(t =>
@@ -271,3 +271,8 @@ tabs.forEach(t =>
     console.log('tab');
   })
 );
+
+tabsContainer.addEventListener('click', function (e) {
+  const clicked = e.target.closest('.operations__tab');
+  console.log(clicked);
+});
