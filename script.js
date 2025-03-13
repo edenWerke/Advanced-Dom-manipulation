@@ -244,3 +244,8 @@ console.log(h1.childNodes);
 console.log(h1.children);
 h1.firstElementChild.style.color = 'pink';
 h1.lastElementChild.style.color = 'orangered';
+// going up ward
+console.log(h1.parentNode);
+console.log(h1.parentElement);
+//finding the closest parent elemnt of h1 and appling style to it
+// h1.closest('.header').style.background = 'var(--gradient-secondary)';
