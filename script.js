@@ -242,3 +242,5 @@ console.log(h1.childNodes);
 
 //getting the element only but direct children
 console.log(h1.children);
+h1.firstElementChild.style.color = 'pink';
+h1.lastElementChild.style.color = 'orangered';
