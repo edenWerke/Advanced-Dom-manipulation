@@ -1,12 +1,10 @@
 'use strict';
-const btnScrollTO=document.querySelector('.btn--scroll-to')
-const section1=document.querySelector('#section--1');
-
-
+const btnScrollTO = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
 
 ///////////////////////////////////////
 // Modal window
-console.log('hello world')
+console.log('hello world');
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
@@ -14,7 +12,7 @@ const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
 
 const openModal = function (e) {
   e.preventDefault();
-  
+
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
 };
@@ -23,7 +21,7 @@ const closeModal = function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
 };
-btnsOpenModal.forEach(btn=>btn.addEventListener('click',openModal))
+btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
 // for (let i = 0; i < btnsOpenModal.length; i++)
 //   btnsOpenModal[i].addEventListener('click', openModal);
 
@@ -36,59 +34,62 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-btnScrollTO.addEventListener('click',function(e){
- const s1coords=section1.getBoundingClientRect();
- console.log(s1coords) 
- //getting the box size of th button
- console.log(e.target.getBoundingClientRect())
-//  getting the offset or current position
- console.log('Current scroll (X/Y)',window.pageXOffset,pageYOffset)
+btnScrollTO.addEventListener('click', function (e) {
+  const s1coords = section1.getBoundingClientRect();
+  console.log(s1coords);
+  //getting the box size of th button
+  console.log(e.target.getBoundingClientRect());
+  //  getting the offset or current position
+  console.log('Current scroll (X/Y)', window.pageXOffset, pageYOffset);
 
-// height and width of the view port
- console.log('height/width viewport',document.documentElement.clientHeight,document.documentElement.clientWidth)
+  // height and width of the view port
+  console.log(
+    'height/width viewport',
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
 
- //SCROLLING
-//  window.scrollTo(s1coords.left+window.pageXOffset,s1coords.top+window.pageYOffset)
-// window.scrollTo({
-//   left:s1coords.left+window.pageXOffset,
-//   top:s1coords.top+window.pageYOffset,
-//   behavior:'smooth'
-// })
-section1.scrollIntoView({behavior:'smooth'})})
-
+  //SCROLLING
+  //  window.scrollTo(s1coords.left+window.pageXOffset,s1coords.top+window.pageYOffset)
+  // window.scrollTo({
+  //   left:s1coords.left+window.pageXOffset,
+  //   top:s1coords.top+window.pageYOffset,
+  //   behavior:'smooth'
+  // })
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
 
 //////////////////////////////////
-document.querySelectorAll('.nav__link').forEach(function(el){
-  el.addEventListener('click',function(e){
+document.querySelectorAll('.nav__link').forEach(function (el) {
+  el.addEventListener('click', function (e) {
     e.preventDefault();
-    console.log("my link ")
+    console.log('my link ');
 
-    const id=this.getAttribute('href')
-    console.log(id)
-    document.querySelector(id).scrollIntoView({behavior:'smooth'})
-  })
-})
+    const id = this.getAttribute('href');
+    console.log(id);
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  });
+});
 //event delegation
 
 //1. Add event listener to common parent element
-document.querySelector('.nav__links').addEventListener('click',function(e){
-e.preventDefault();
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
 
   //mayching stratagy
-  if(e.target.classList.contains('nav__link')){
-    const id=e.target.getAttribute('href')
-    console.log(id)
-    document.querySelector(id).scrollIntoView({behavior:'smooth'})
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    console.log(id);
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
-})
-
+});
 
 //how dom works behind the scene
 // every single node is node
-// there are differnt types node 
+// there are differnt types node
 // elemnt type,tect,type comment type and node type
 //inhiretance
-// child node can acsess parent node 
+// child node can acsess parent node
 //document that we use in dom manuplation is another type of dom node
 // special node type called event target thank to inheritance bwcause ue can call add event listenrt on every node type in the dom api
 //SELECTING
@@ -108,7 +109,6 @@ e.preventDefault();
 
 // const allButtons=document.getElementsByTagName('button')
 // console.log(allButtons)
-
 
 // console.log(document.getElementsByClassName('btn'))
 
@@ -137,14 +137,12 @@ e.preventDefault();
 // document.querySelector('.header').before(message)
 // document.querySelector('.header').after(message)
 
-
 //delete an element
 // no need to select the message element because it is already saved
 // document.querySelector('.btn--close-cookie').addEventListener('click',function(){
 //   message.remove();
-// // 
+// //
 // });
-
 
 // STYLES
 // styles directly applied to the inline style
@@ -166,7 +164,6 @@ e.preventDefault();
 // console.log(logo.alt)
 // console.log(logo.className)
 
-
 // logo.alt='Beatifull minimalist logo'
 // // for those that are not standards
 // console.log(logo.getAttribute('designer'))
@@ -176,7 +173,6 @@ e.preventDefault();
 // const links=document.querySelector('.twitter-link')
 // console.log(links.href);
 // console.log(links.getAttribute('href'))
-
 
 // //Data attributes
 
@@ -218,7 +214,6 @@ e.preventDefault();
 // const randomColor=()=>`rgb(${randomInt(0,255)},${randomInt(0,255)},${randomInt(0,255)})`
 // console.log(randomColor(0,255))
 
-
 // document.querySelector('.nav__link').addEventListener('click',function(e){
 //   this.style.backgroundColor=randomColor();
 //   console.log(e.target,e.currentTarget)
@@ -236,3 +231,9 @@ e.preventDefault();
 // },true)
 //listeninig to the captur event not the bubbling event
 //capturing is from botto to up
+// traversing  through the dom
+
+const h1 = document.querySelector('h1');
+// selecting child elemenet using parent element
+
+console.log(h1.querySelectorAll('.highlight'));
